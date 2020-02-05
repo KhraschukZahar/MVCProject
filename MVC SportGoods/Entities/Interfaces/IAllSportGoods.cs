@@ -7,6 +7,6 @@ namespace MVC_SportGoods.Entities.Interfaces
 {
     public interface IAllSportGoods
     {
-        IEnumerable<SportGoods> SportGoodss { get; }
+        IEnumerable<SportGoods> SportGoods { get; }
     }
 }

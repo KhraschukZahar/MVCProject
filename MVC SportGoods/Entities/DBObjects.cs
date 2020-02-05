@@ -25,7 +25,23 @@ namespace MVC_SportGoods.Entities
                        img = "/img/samsung_galaxy_s10_6_128_gb_white.jpg",
                        price = 23000,
                         //= SportViewCategories["Flagman"]
-                   }
+                   },
+                    new SportGoods
+                    {
+                        name = "Samsung S10",
+                        description = "Best phone by Samsung",
+                        img = "/img/samsung_galaxy_s10_6_128_gb_white.jpg",
+                        price = 23000,
+                        //= SportViewCategories["Flagman"]
+                    },
+                     new SportGoods
+                     {
+                         name = "Samsung S10",
+                         description = "Best phone by Samsung",
+                         img = "/img/samsung_galaxy_s10_6_128_gb_white.jpg",
+                         price = 23000,
+                         //= SportViewCategories["Flagman"]
+                     }
                 );
             }
             content.SaveChanges();

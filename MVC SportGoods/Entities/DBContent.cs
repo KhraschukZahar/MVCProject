@@ -1,5 +1,4 @@
-﻿using SportGoods.Main.Models;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +10,10 @@ namespace MVC_SportGoods
 {
     public class DBContent : DbContext
     {
+        public DBContent(DbContextOptions<DBContent> options) : base(options)
+        {
+
+        }
         public DbSet<SportGoods> SportGoods { get; set; }
         public DbSet<SportViewCategory> SportViewCategory { get; set; }
     }
