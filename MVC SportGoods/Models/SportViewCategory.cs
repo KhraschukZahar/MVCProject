@@ -13,6 +13,6 @@ namespace MVC_SportGoods.Models
 
         public string categoryDescription { get; set; }
 
-        public List<SportGoods> SportGoods { get; set; }
+        public List<SportsViewModel> SportGoods { get; set; }
     }
 }

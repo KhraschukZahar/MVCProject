@@ -62,3 +62,35 @@ C:\Users\dell\Desktop\ASP.NET.CORE\MVCProject\MVC SportGoods\obj\Debug\netcoreap
 C:\Users\dell\Desktop\ASP.NET.CORE\MVCProject\MVC SportGoods\obj\Debug\netcoreapp2.2\MVC SportGoods.dll
 C:\Users\dell\Desktop\ASP.NET.CORE\MVCProject\MVC SportGoods\obj\Debug\netcoreapp2.2\MVC SportGoods.pdb
 C:\Users\dell\Desktop\ASP.NET.CORE\MVCProject\MVC SportGoods\obj\Debug\netcoreapp2.2\MVC SportGoods.csproj.CopyComplete
+C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\obj\Debug\netcoreapp2.2\MVC SportGoods.csprojAssemblyReference.cache
+C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\obj\Debug\netcoreapp2.2\MVC SportGoods.csproj.CoreCompileInputs.cache
+C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\obj\Debug\netcoreapp2.2\MVC SportGoods.RazorAssemblyInfo.cache
+C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\obj\Debug\netcoreapp2.2\MVC SportGoods.RazorAssemblyInfo.cs
+C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\obj\Debug\netcoreapp2.2\MVC SportGoods.AssemblyInfoInputs.cache
+C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\obj\Debug\netcoreapp2.2\MVC SportGoods.AssemblyInfo.cs
+C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\obj\Debug\netcoreapp2.2\MVC SportGoods.dll
+C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\obj\Debug\netcoreapp2.2\MVC SportGoods.pdb
+C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\bin\Debug\netcoreapp2.2\MVC SportGoods.deps.json
+C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\bin\Debug\netcoreapp2.2\MVC SportGoods.runtimeconfig.json
+C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\bin\Debug\netcoreapp2.2\MVC SportGoods.runtimeconfig.dev.json
+C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\bin\Debug\netcoreapp2.2\MVC SportGoods.dll
+C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\bin\Debug\netcoreapp2.2\MVC SportGoods.pdb
+C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\bin\Debug\netcoreapp2.2\MVC SportGoods.Views.dll
+C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\bin\Debug\netcoreapp2.2\MVC SportGoods.Views.pdb
+C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\obj\Debug\netcoreapp2.2\MVC SportGoods.TagHelpers.input.cache
+C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\obj\Debug\netcoreapp2.2\MVC SportGoods.TagHelpers.output.cache
+C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\obj\Debug\netcoreapp2.2\MVC SportGoods.RazorCoreGenerate.cache
+C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\obj\Debug\netcoreapp2.2\Razor\Views\Home\About.g.cshtml.cs
+C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\obj\Debug\netcoreapp2.2\Razor\Views\Home\HowItWorks.g.cshtml.cs
+C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.g.cshtml.cs
+C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.g.cshtml.cs
+C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.g.cshtml.cs
+C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.g.cshtml.cs
+C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.g.cshtml.cs
+C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\obj\Debug\netcoreapp2.2\MVC SportGoods.RazorTargetAssemblyInfo.cache
+C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\obj\Debug\netcoreapp2.2\MVC SportGoods.RazorTargetAssemblyInfo.cs
+C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\obj\Debug\netcoreapp2.2\MVC SportGoods.Views.pdb
+C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\obj\Debug\netcoreapp2.2\MVC SportGoods.csproj.CopyComplete
+C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\obj\Debug\netcoreapp2.2\Razor\Views\SportGoods\SportsViewModel.g.cshtml.cs

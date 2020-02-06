@@ -1,4 +1,5 @@
 ﻿using MVC_SportGoods.Entities.Interfaces;
+using MVC_SportGoods.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,6 @@ namespace MVC_SportGoods.Entities.Repositories
             this.dbContent = dbContent;
         }
 
-        public IEnumerable<SportGoods> SportGoods => dbContent.SportGoods;
+        public IEnumerable<SportsViewModel> SportGoods => dbContent.SportGoods;
     }
 }

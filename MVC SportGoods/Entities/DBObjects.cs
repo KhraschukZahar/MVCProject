@@ -18,28 +18,28 @@ namespace MVC_SportGoods.Entities
             if (!content.SportGoods.Any())
             {
                 content.AddRange(
-                   new SportGoods
+                   new SportsViewModel
                    {
-                       name = "Samsung S10",
-                       description = "Best phone by Samsung",
-                       img = "/img/samsung_galaxy_s10_6_128_gb_white.jpg",
-                       price = 23000,
+                       name = "М'яч для американського футболу",
+                       description = "Select American Football Pro №5 Brown (5703543078905)",
+                       img = "/img/М'яч для американського футболу.jpg",
+                       price = 812,
                         //= SportViewCategories["Flagman"]
                    },
-                    new SportGoods
+                    new SportsViewModel
                     {
-                        name = "Samsung S10",
-                        description = "Best phone by Samsung",
-                        img = "/img/samsung_galaxy_s10_6_128_gb_white.jpg",
-                        price = 23000,
+                        name = "Ракетка настільного тенісу",
+                        description = "Atemi 2000 (87274175417)",
+                        img = "/img/Ракетка настільного тенісу.jpg",
+                        price = 1000,
                         //= SportViewCategories["Flagman"]
                     },
-                     new SportGoods
+                     new SportsViewModel
                      {
-                         name = "Samsung S10",
-                         description = "Best phone by Samsung",
-                         img = "/img/samsung_galaxy_s10_6_128_gb_white.jpg",
-                         price = 23000,
+                         name = "Баскетбольное Кольцо",
+                         description = "Корзина TARMAK (100 x 48 x 2,3 см) Черное",
+                         img = "/img/Баскетбольное Кольцо.jpg",
+                         price = 3700,
                          //= SportViewCategories["Flagman"]
                      }
                 );

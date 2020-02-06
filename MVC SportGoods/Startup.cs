@@ -6,16 +6,22 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using MVC_SportGoods.Entities.Interfaces;
+using MVC_SportGoods.Entities.Repositories;
+using MVC_SportGoods;
+using MVC_SportGoods.Entities;
 
 namespace MVC_SportGoods
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        private IConfigurationRoot _dbConf;
+        public Startup(IHostingEnvironment ENV)
         {
-            Configuration = configuration;
+            _dbConf = new ConfigurationBuilder().SetBasePath(ENV.ContentRootPath).AddJsonFile("settings.json").Build();
         }
 
         public IConfiguration Configuration { get; }
@@ -23,6 +29,8 @@ namespace MVC_SportGoods
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<DBContent>(options => options.UseSqlServer(_dbConf.GetConnectionString("DefaultConnection")));
+            services.AddTransient<IAllSportGoods, SportGoodsRepository>();
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
@@ -46,6 +54,8 @@ namespace MVC_SportGoods
                 app.UseExceptionHandler("/Home/Error");
             }
 
+
+
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
@@ -55,6 +65,12 @@ namespace MVC_SportGoods
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            using (var scope = app.ApplicationServices.CreateScope())
+            {
+                DBContent content = scope.ServiceProvider.GetRequiredService<DBContent>();
+                DBObjects.Initial(content);
+            }
         }
     }
 }

@@ -8,7 +8,14 @@ namespace MVC_SportGoods.Models
 {
     public class SportsViewModel
     {
-        public IEnumerable<SportGoods> allSportGoods { get; set; }
+        public int id { get; set; }
+
+        public string name { get; set; }
+
+        public string description { get; set; }
+
+        public string img { get; set; }
+        public uint price { get; set; }
 
     }
 }   
