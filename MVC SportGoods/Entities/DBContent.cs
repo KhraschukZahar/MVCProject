@@ -15,6 +15,5 @@ namespace MVC_SportGoods
 
         }
         public DbSet<SportsViewModel> SportGoods { get; set; }
-        public DbSet<SportViewCategory> SportViewCategory { get; set; }
     }
 }

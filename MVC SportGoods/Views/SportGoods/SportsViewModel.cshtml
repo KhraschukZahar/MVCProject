@@ -2,13 +2,16 @@
     <div class="col-md-12">
         @{ foreach (var item in Model)
             {
-                <div class="fff">
-                    <img class="phones-image" src="@item.img" alt="@item.name" />
-                    <div>Vendor:@item.name</div>
-                    <div>Price:@item.price UAH</div>
-                    <div>Description:@item.description</div>
-                </div>
+        <div class="fff">
+            <img class="phones-image" src="@item.img" alt="@item.name" />
+            <div>Vendor:@item.name</div>
+            <div>Price:@item.price UAH</div>
+            <div>Description:@item.description</div>
+            <a class="btn btn-success" asp-controller="SportGoods" asp-action="Post" asp-route-id="@item.id">Read more</a>
+            <a class="btn btn-warning" asp-controller="SportGoods" asp-action="Edit" asp-route-id="@item.id">Edit</a>
+            <a class="btn btn-danger" asp-controller="SportGoods" asp-action="Post" asp-route-id="@item.id">Delete</a>
+        </div>
             }
         }
     </div>
-</div>
+</div>  

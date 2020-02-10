@@ -69,7 +69,7 @@ namespace MVC_SportGoods
             using (var scope = app.ApplicationServices.CreateScope())
             {
                 DBContent content = scope.ServiceProvider.GetRequiredService<DBContent>();
-                DBObjects.Initial(content);
+                DBObjects.DBObjectsData(content);
             }
         }
     }

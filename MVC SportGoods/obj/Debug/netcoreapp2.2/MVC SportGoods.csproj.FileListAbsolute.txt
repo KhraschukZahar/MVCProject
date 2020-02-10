@@ -94,3 +94,4 @@ C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\obj\Debug\n
 C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\obj\Debug\netcoreapp2.2\MVC SportGoods.Views.pdb
 C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\obj\Debug\netcoreapp2.2\MVC SportGoods.csproj.CopyComplete
 C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\obj\Debug\netcoreapp2.2\Razor\Views\SportGoods\SportsViewModel.g.cshtml.cs
+C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\obj\Debug\netcoreapp2.2\Razor\Views\SportGoods\SportGood.g.cshtml.cs

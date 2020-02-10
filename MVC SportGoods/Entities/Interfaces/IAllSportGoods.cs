@@ -8,6 +8,10 @@ namespace MVC_SportGoods.Entities.Interfaces
 {
     public interface IAllSportGoods
     {
-        IEnumerable<SportsViewModel> SportGoods { get; }
+        SportsViewModel GetPostById(int id);
+        IEnumerable<SportsViewModel> GetAllPosts();
+        SportsViewModel CreatePost(SportsViewModel post);
+        SportsViewModel UpdatePost(SportsViewModel newPost);
+        SportsViewModel DeletePost(int Id);
     }
 }
