@@ -13,8 +13,8 @@ namespace MVC_SportGoods.Migrations
                 {
                     id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    name = table.Column<string>(maxLength: 20, nullable: false),
-                    description = table.Column<string>(nullable: false),
+                    name = table.Column<string>(maxLength: 50, nullable: false),
+                    description = table.Column<string>(maxLength: 60, nullable: false),
                     img = table.Column<string>(nullable: true),
                     price = table.Column<long>(nullable: false)
                 },

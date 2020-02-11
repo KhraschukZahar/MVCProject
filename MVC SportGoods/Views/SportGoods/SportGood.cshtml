@@ -1,7 +1,14 @@
 ﻿<div class="container post-block">
     <article>
         <h2 class="text-center">@Model.name</h2>
-        <img class="post-image" src="@Model.img" />
+        @if (Model.img == null)
+        {
+            <img class="blog-image" src="~/img/None_flowers.jpg">
+        }
+        else
+        {
+            <img class="blog-image" src="~/img/@Model.img">
+        }
         <p>@Model.description</p>
         <p>@Model.price</p>
     </article>

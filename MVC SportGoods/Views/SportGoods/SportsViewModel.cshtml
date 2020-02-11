@@ -1,13 +1,20 @@
 ﻿<div class="row">
     <div class="col-md-12">
         @{ foreach (var item in Model)
-            {
+            {     
         <div class="fff">
-            <img class="phones-image" src="@item.img" alt="@item.name" />
+            @if (item.img == null)
+            {
+            <img class="blog-image" src="~/img/None_flowers.jpg">
+            }
+            else
+            {
+            <img class="blog-image" src="~/img/@item.img">
+            }
             <div>Vendor:@item.name</div>
             <div>Price:@item.price UAH</div>
             <div>Description:@item.description</div>
-            <a class="btn btn-success" asp-controller="SportGoods" asp-action="Post" asp-route-id="@item.id">Read more</a>
+            <a class="btn btn-success" asp-controller="SportGoods" asp-action="SportGood" asp-route-id="@item.id">Read more</a>
             <a class="btn btn-warning" asp-controller="SportGoods" asp-action="Edit" asp-route-id="@item.id">Edit</a>
             <a class="btn btn-danger" asp-controller="SportGoods" asp-action="Post" asp-route-id="@item.id">Delete</a>
         </div>

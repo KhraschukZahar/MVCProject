@@ -17,23 +17,23 @@ namespace MVC_SportGoods.Entities
                    {
                        name = "М'яч для американського футболу",
                        description = "Select American Football Pro №5 Brown (5703543078905)",
-                       img = "/img/М'яч для американського футболу.jpg",
+                       img = "М'яч для американського футболу.jpg",
                        price = 812,
                         
                    },
                     new SportsViewModel
                     {
-                        name = "Ракетка настільного тенісу",
+                        name = "Ракетка для настільного тенісу",
                         description = "Atemi 2000 (87274175417)",
-                        img = "/img/Ракетка настільного тенісу.jpg",
+                        img = "Ракетка настільного тенісу.jpg",
                         price = 1000,
                         
                     },
                      new SportsViewModel
                      {
-                         name = "Баскетбольное Кольцо",
-                         description = "Корзина TARMAK (100 x 48 x 2,3 см) Черное",
-                         img = "/img/Баскетбольное Кольцо.jpg",
+                         name = "Баскетбольне Кільце",
+                         description = "Корзина TARMAK (100 x 48 x 2,3 см) Чорний",
+                         img = "Баскетбольное Кольцо.jpg",
                          price = 3700,
                          
                      }
