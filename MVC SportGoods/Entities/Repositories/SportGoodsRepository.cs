@@ -36,7 +36,9 @@ namespace MVC_SportGoods.Entities.Repositories
 
         public IEnumerable<SportsViewModel> GetAllPosts()
         {
-            return dbContent.SportGoods;
+            var list = dbContent.SportGoods.ToList();
+            list.Reverse();
+            return list;
         }
 
         public SportsViewModel GetPostById(int Id)

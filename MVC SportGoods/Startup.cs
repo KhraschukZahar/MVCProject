@@ -30,6 +30,7 @@ namespace MVC_SportGoods
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<DBContent>(options => options.UseSqlServer(_dbConf.GetConnectionString("DefaultConnection")));
+
             services.AddTransient<IAllSportGoods, SportGoodsRepository>();
             services.Configure<CookiePolicyOptions>(options =>
             {
@@ -51,13 +52,14 @@ namespace MVC_SportGoods
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+                app.UseStatusCodePagesWithReExecute("/Error/{0}");
             }
 
 
 
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            app.UseAuthentication();
 
             app.UseMvc(routes =>
             {

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using MVC_SportGoods.Entities;
 using MVC_SportGoods.Entities.Interfaces;
 using MVC_SportGoods.Models;
@@ -18,19 +19,34 @@ namespace MVC_SportGoods.Controllers
         private readonly DBContent _context;
         private readonly IAllSportGoods _postRepository;
         private readonly IHostingEnvironment hostingEnvironment;
+        private readonly ILogger logger;
 
-        public SportGoodsController(DBContent context, IAllSportGoods postRepository, IHostingEnvironment hostingEnvironment)
+        public SportGoodsController(DBContent context, IAllSportGoods postRepository, IHostingEnvironment hostingEnvironment, ILogger<SportGoodsController> logger)
         {
             _context = context;
             _postRepository = postRepository;
             this.hostingEnvironment = hostingEnvironment;
+            this.logger = logger;
         }
 
 
         [Route("Blog/Post/{id}")]
         public IActionResult SportGood(int id)
         {
+            logger.LogTrace("Trace Log");
+            logger.LogDebug("Debug Log");
+            logger.LogInformation("Information Log");
+            logger.LogWarning("Warning Log");
+            logger.LogError("Error Log");
+            logger.LogCritical("Critical Log");
             var post = _postRepository.GetPostById(id);
+            
+            if (post == null)
+            {
+                Response.StatusCode = 404;
+                return View("PostNotFound", id);
+            }
+
             return View(post);
         }
 
