@@ -101,3 +101,4 @@ C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\obj\Debug\n
 C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\obj\Debug\netcoreapp2.2\Razor\Views\Shared\PostNotFound.g.cshtml.cs
 C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\obj\Debug\netcoreapp2.2\Razor\Views\Shared\NotFound.g.cshtml.cs
 C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\bin\Debug\netcoreapp2.2\nlog.config
+C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\obj\Debug\netcoreapp2.2\Razor\Views\Account\Register.g.cshtml.cs

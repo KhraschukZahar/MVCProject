@@ -13,6 +13,7 @@ using MVC_SportGoods.Entities.Interfaces;
 using MVC_SportGoods.Entities.Repositories;
 using MVC_SportGoods;
 using MVC_SportGoods.Entities;
+using Microsoft.AspNetCore.Identity;
 
 namespace MVC_SportGoods
 {
@@ -39,6 +40,12 @@ namespace MVC_SportGoods
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            services.AddIdentity<IdentityUser, IdentityRole>(options =>
+            {
+                options.Password.RequiredLength = 5;
+                options.Password.RequiredUniqueChars = 2;
+            })
+               .AddEntityFrameworkStores<DBContent>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
