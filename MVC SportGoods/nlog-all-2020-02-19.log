@@ -1,0 +1,115 @@
+2020-02-19 09:57:08.1702|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTL251JQ16K", Request id "0HLTL251JQ16K:00000007": An unhandled exception was thrown by the application.
+2020-02-19 09:58:43.5320|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTL260RAC2J", Request id "0HLTL260RAC2J:00000005": An unhandled exception was thrown by the application.
+2020-02-19 10:00:09.1377|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTL26RP0JNR", Request id "0HLTL26RP0JNR:00000005": An unhandled exception was thrown by the application.
+2020-02-19 10:09:23.8654|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTL2C0V94I5", Request id "0HLTL2C0V94I5:00000005": An unhandled exception was thrown by the application.
+2020-02-19 10:10:41.6407|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTL2C0V94I5", Request id "0HLTL2C0V94I5:00000008": An unhandled exception was thrown by the application.
+2020-02-19 10:11:58.1003|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTL2DE7HNQE", Request id "0HLTL2DE7HNQE:00000005": An unhandled exception was thrown by the application.
+2020-02-19 10:16:19.1304|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTL2FVJ4QDL", Request id "0HLTL2FVJ4QDL:00000001": An unhandled exception was thrown by the application.
+2020-02-19 10:16:37.9847|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTL2FVJ4QDL", Request id "0HLTL2FVJ4QDL:00000004": An unhandled exception was thrown by the application.
+2020-02-19 10:19:09.7330|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'DBContent' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-19 10:19:25.7403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'DBContent' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-19 10:19:26.1386|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (94ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2020-02-19 10:19:26.1386|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2020-02-19 10:19:26.1789|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (35ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2020-02-19 10:19:26.1789|INFO|Microsoft.EntityFrameworkCore.Migrations|Applying migration '20200219081909_Identity'.
+2020-02-19 10:19:26.2489|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetRoles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+);
+2020-02-19 10:19:26.2533|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetUsers] (
+    [Id] nvarchar(450) NOT NULL,
+    [UserName] nvarchar(256) NULL,
+    [NormalizedUserName] nvarchar(256) NULL,
+    [Email] nvarchar(256) NULL,
+    [NormalizedEmail] nvarchar(256) NULL,
+    [EmailConfirmed] bit NOT NULL,
+    [PasswordHash] nvarchar(max) NULL,
+    [SecurityStamp] nvarchar(max) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [PhoneNumberConfirmed] bit NOT NULL,
+    [TwoFactorEnabled] bit NOT NULL,
+    [LockoutEnd] datetimeoffset NULL,
+    [LockoutEnabled] bit NOT NULL,
+    [AccessFailedCount] int NOT NULL,
+    CONSTRAINT [PK_AspNetUsers] PRIMARY KEY ([Id])
+);
+2020-02-19 10:19:26.2533|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetRoleClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [RoleId] nvarchar(450) NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoleClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AspNetRoleClaims_AspNetRoles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [AspNetRoles] ([Id]) ON DELETE CASCADE
+);
+2020-02-19 10:19:26.2905|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetUserClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetUserClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AspNetUserClaims_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2020-02-19 10:19:26.3009|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetUserLogins] (
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [ProviderKey] nvarchar(450) NOT NULL,
+    [ProviderDisplayName] nvarchar(max) NULL,
+    [UserId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_AspNetUserLogins] PRIMARY KEY ([LoginProvider], [ProviderKey]),
+    CONSTRAINT [FK_AspNetUserLogins_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2020-02-19 10:19:26.3009|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetUserRoles] (
+    [UserId] nvarchar(450) NOT NULL,
+    [RoleId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_AspNetUserRoles] PRIMARY KEY ([UserId], [RoleId]),
+    CONSTRAINT [FK_AspNetUserRoles_AspNetRoles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [AspNetRoles] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_AspNetUserRoles_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2020-02-19 10:19:27.2426|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetUserTokens] (
+    [UserId] nvarchar(450) NOT NULL,
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [Name] nvarchar(450) NOT NULL,
+    [Value] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetUserTokens] PRIMARY KEY ([UserId], [LoginProvider], [Name]),
+    CONSTRAINT [FK_AspNetUserTokens_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2020-02-19 10:19:27.2426|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_AspNetRoleClaims_RoleId] ON [AspNetRoleClaims] ([RoleId]);
+2020-02-19 10:19:27.2426|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE UNIQUE INDEX [RoleNameIndex] ON [AspNetRoles] ([NormalizedName]) WHERE [NormalizedName] IS NOT NULL;
+2020-02-19 10:19:27.2426|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserClaims_UserId] ON [AspNetUserClaims] ([UserId]);
+2020-02-19 10:19:27.2426|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserLogins_UserId] ON [AspNetUserLogins] ([UserId]);
+2020-02-19 10:19:27.2426|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserRoles_RoleId] ON [AspNetUserRoles] ([RoleId]);
+2020-02-19 10:19:27.2426|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [EmailIndex] ON [AspNetUsers] ([NormalizedEmail]);
+2020-02-19 10:19:27.2517|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE UNIQUE INDEX [UserNameIndex] ON [AspNetUsers] ([NormalizedUserName]) WHERE [NormalizedUserName] IS NOT NULL;
+2020-02-19 10:19:28.2439|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20200219081909_Identity', N'2.2.6-servicing-10079');
+2020-02-19 10:19:52.5937|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTL2HV09I7G", Request id "0HLTL2HV09I7G:00000001": An unhandled exception was thrown by the application.
+2020-02-19 10:21:27.6140|WARN|Microsoft.AspNetCore.Identity.UserManager|User ae696bc8-3f6c-4989-8f4a-38b401e7410b validation failed: DuplicateUserName.
+2020-02-19 10:21:49.9690|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTL2ILNR64Q", Request id "0HLTL2ILNR64Q:0000000B": An unhandled exception was thrown by the application.
+2020-02-19 10:23:54.7681|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTL2JVSK8QM", Request id "0HLTL2JVSK8QM:00000003": An unhandled exception was thrown by the application.
+2020-02-19 10:27:59.5788|WARN|Microsoft.AspNetCore.Identity.UserManager|User 8c554c87-9d5a-40b2-93ed-db91f67ce019 validation failed: DuplicateUserName.
+2020-02-19 10:28:13.6818|WARN|Microsoft.AspNetCore.Identity.UserManager|User 1b28a443-9d1f-4323-b145-de2187bb9087 validation failed: DuplicateUserName.
+2020-02-19 10:28:19.9203|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTL2MGA1B2K", Request id "0HLTL2MGA1B2K:00000004": An unhandled exception was thrown by the application.
+2020-02-19 10:29:19.4770|WARN|Microsoft.AspNetCore.Identity.UserManager|User 1e45db07-56c6-4600-958f-6a7d7cf63850 validation failed: DuplicateUserName.

@@ -28,8 +28,13 @@ using Microsoft.AspNetCore.Identity;
 
 #line default
 #line hidden
+#line 4 "C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\Views\_ViewImports.cshtml"
+using MVC_SportGoods.ViewModel;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"506f39137fb7a27b36e36f5e47b07724c1c7791d", @"/Views/SportGoods/SportGood.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0d19791ed5f982979fe3f992634a80464eba3192", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"07b2302d4c7fddba7d678dda78bd2d08fe1ae563", @"/Views/_ViewImports.cshtml")]
     public class Views_SportGoods_SportGood : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("blog-image"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -79,7 +84,7 @@ using Microsoft.AspNetCore.Identity;
             WriteLiteral("            ");
             EndContext();
             BeginContext(157, 53, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "506f39137fb7a27b36e36f5e47b07724c1c7791d4957", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "506f39137fb7a27b36e36f5e47b07724c1c7791d5127", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -108,7 +113,7 @@ using Microsoft.AspNetCore.Identity;
             WriteLiteral("            ");
             EndContext();
             BeginContext(260, 47, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "506f39137fb7a27b36e36f5e47b07724c1c7791d6502", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "506f39137fb7a27b36e36f5e47b07724c1c7791d6672", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

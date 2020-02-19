@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -31,6 +32,7 @@ namespace MVC_SportGoods.Controllers
 
 
         [Route("Blog/Post/{id}")]
+        [AllowAnonymous]
         public IActionResult SportGood(int id)
         {
             logger.LogTrace("Trace Log");
@@ -49,7 +51,7 @@ namespace MVC_SportGoods.Controllers
 
             return View(post);
         }
-
+        [AllowAnonymous]
         public IActionResult SportsViewModel()
         {
             var posts = _postRepository.GetAllPosts().ToList();

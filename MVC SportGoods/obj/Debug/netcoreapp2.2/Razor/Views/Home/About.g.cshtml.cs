@@ -28,8 +28,13 @@ using Microsoft.AspNetCore.Identity;
 
 #line default
 #line hidden
+#line 4 "C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\Views\_ViewImports.cshtml"
+using MVC_SportGoods.ViewModel;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7165320f13853db1a208da2a99410db766254678", @"/Views/Home/About.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0d19791ed5f982979fe3f992634a80464eba3192", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"07b2302d4c7fddba7d678dda78bd2d08fe1ae563", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_About : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

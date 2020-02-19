@@ -41,11 +41,11 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="SportGoods" asp-action="SportsViewModel">SportGoods</a>
                         </li>
+                        @if (SignInManager.IsSignedIn(User))
+                        {
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Admin">Admin</a>
                         </li>
-                        @if (SignInManager.IsSignedIn(User))
-                        {
                             <li class="nav-item">
                                 <form method="post" asp-controller="Account" asp-action="logout">
                                     <button type="submit" style="width:auto"
@@ -80,7 +80,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2020 - MVC_SportGoods - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2020 - MVC_SportGoods - <a asp-area="" asp-controller="Home" asp-action="HowItWorks">How It Works</a>
         </div>
     </footer>
 

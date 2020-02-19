@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using MVC_SportGoods.ViewModel;
@@ -22,12 +23,14 @@ namespace MVC_SportGoods.Controllers
         }
 
         [HttpGet]
+        [AllowAnonymous]
         public IActionResult Register()
         {
             return View();
         }
 
         [HttpPost]
+        [AllowAnonymous]
         public async Task<IActionResult> Register(RegisterViewModel model)
         {
             if (ModelState.IsValid)
@@ -37,7 +40,7 @@ namespace MVC_SportGoods.Controllers
                 if (result.Succeeded)
                 {
                     await signInManager.SignInAsync(user, isPersistent: false);
-                    return RedirectToAction("SportGood", "SportGood");
+                    return RedirectToAction("SportsViewModel", "SportGoods");
                 }
 
                 foreach (var error in result.Errors)
@@ -52,7 +55,41 @@ namespace MVC_SportGoods.Controllers
         public async Task<IActionResult> Logout()
         {
             await signInManager.SignOutAsync();
-            return RedirectToAction("SportGood", "SportGood");
+            return RedirectToAction("SportsViewModel", "SportGoods");
+        }
+
+        [HttpGet]
+        [AllowAnonymous]
+        public IActionResult Login()
+        {
+            return View();
+        }
+        [HttpPost]
+        [AllowAnonymous]
+        public async Task<IActionResult> Login(LoginViewModel model, string returnUrl)
+        {
+            if (ModelState.IsValid)
+            {
+                var result = await signInManager.PasswordSignInAsync(
+                    model.Email, model.Password, model.RememberMe, false);
+
+                if (result.Succeeded)
+                {
+                    if (!string.IsNullOrEmpty(returnUrl))
+                    {
+                        return Redirect(returnUrl);
+                    }
+                    else
+                    {
+                        return RedirectToAction("SportsViewModel", "SportGoods");
+                    }
+
+                }
+
+                ModelState.AddModelError(string.Empty, "Invalid Login Attempt");
+            }
+
+            return View(model);
         }
     }
 }

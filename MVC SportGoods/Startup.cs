@@ -14,6 +14,8 @@ using MVC_SportGoods.Entities.Repositories;
 using MVC_SportGoods;
 using MVC_SportGoods.Entities;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.Authorization;
 
 namespace MVC_SportGoods
 {
@@ -47,9 +49,16 @@ namespace MVC_SportGoods
             })
                .AddEntityFrameworkStores<DBContent>();
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-        }
+            //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
+            services.AddMvc(config =>
+            {
+                var policy = new AuthorizationPolicyBuilder()
+                                .RequireAuthenticatedUser()
+                                .Build();
+                config.Filters.Add(new AuthorizeFilter(policy));
+            });
+        }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
