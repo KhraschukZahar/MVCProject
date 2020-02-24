@@ -21,5 +21,10 @@ namespace MVC_SportGoods.ViewModel
         [Compare("Password",
             ErrorMessage = "Password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        public string City { get; set; }
+        public string Street { get; set; }
+
+        public string Position { get; set; }
     }
 }

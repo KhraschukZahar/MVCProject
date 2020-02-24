@@ -103,3 +103,6 @@ C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\obj\Debug\n
 C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\bin\Debug\netcoreapp2.2\nlog.config
 C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\obj\Debug\netcoreapp2.2\Razor\Views\Account\Register.g.cshtml.cs
 C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\obj\Debug\netcoreapp2.2\Razor\Views\Account\Login.g.cshtml.cs
+C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\obj\Debug\netcoreapp2.2\Razor\Views\Administrator\CreateRole.g.cshtml.cs
+C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\obj\Debug\netcoreapp2.2\Razor\Views\Administrator\EditRole.g.cshtml.cs
+C:\Users\Kirito\Desktop\MVC SportGoods\MVC SportGoods\MVC SportGoods\obj\Debug\netcoreapp2.2\Razor\Views\Administrator\ListRoles.g.cshtml.cs

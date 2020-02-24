@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace MVC_SportGoods
 {
-    public class DBContent : IdentityDbContext
+    public class DBContent : IdentityDbContext<AppUser>
     {
         public DBContent(DbContextOptions<DBContent> options) : base(options)
         {
