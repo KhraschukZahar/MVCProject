@@ -1,0 +1,187 @@
+2020-02-25 09:58:57.7654|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPP26NTQ4F", Request id "0HLTPP26NTQ4F:00000002": An unhandled exception was thrown by the application.
+2020-02-25 09:58:57.8510|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPP26NTQ4F", Request id "0HLTPP26NTQ4F:00000003": An unhandled exception was thrown by the application.
+2020-02-25 09:58:57.8702|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPP26NTQ4F", Request id "0HLTPP26NTQ4F:00000004": An unhandled exception was thrown by the application.
+2020-02-25 09:58:58.0817|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPP26NTQ4F", Request id "0HLTPP26NTQ4F:00000005": An unhandled exception was thrown by the application.
+2020-02-25 10:44:26.4423|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPPRLIA0RE", Request id "0HLTPPRLIA0RE:00000002": An unhandled exception was thrown by the application.
+2020-02-25 10:44:26.5141|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPPRLIA0RE", Request id "0HLTPPRLIA0RE:00000003": An unhandled exception was thrown by the application.
+2020-02-25 10:44:26.5373|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPPRLIA0RE", Request id "0HLTPPRLIA0RE:00000004": An unhandled exception was thrown by the application.
+2020-02-25 10:44:27.8657|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPPRLIA0RD", Request id "0HLTPPRLIA0RD:00000005": An unhandled exception was thrown by the application.
+2020-02-25 10:44:27.8909|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPPRLIA0RE", Request id "0HLTPPRLIA0RE:00000008": An unhandled exception was thrown by the application.
+2020-02-25 10:44:27.9181|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPPRLIA0RE", Request id "0HLTPPRLIA0RE:00000009": An unhandled exception was thrown by the application.
+2020-02-25 10:44:29.7536|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPPRLIA0RD", Request id "0HLTPPRLIA0RD:00000008": An unhandled exception was thrown by the application.
+2020-02-25 10:44:29.7683|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPPRLIA0RD", Request id "0HLTPPRLIA0RD:00000009": An unhandled exception was thrown by the application.
+2020-02-25 10:44:29.8174|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPPRLIA0RD", Request id "0HLTPPRLIA0RD:0000000B": An unhandled exception was thrown by the application.
+2020-02-25 10:44:33.6837|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPPRLIA0RD", Request id "0HLTPPRLIA0RD:0000000C": An unhandled exception was thrown by the application.
+2020-02-25 10:45:30.8879|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPPS7IFT0J", Request id "0HLTPPS7IFT0J:00000001": An unhandled exception was thrown by the application.
+2020-02-25 10:45:35.0757|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPPS7IFT0J", Request id "0HLTPPS7IFT0J:00000002": An unhandled exception was thrown by the application.
+2020-02-25 10:45:38.9362|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPPS7IFT0L", Request id "0HLTPPS7IFT0L:00000002": An unhandled exception was thrown by the application.
+2020-02-25 10:45:38.9478|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPPS7IFT0L", Request id "0HLTPPS7IFT0L:00000003": An unhandled exception was thrown by the application.
+2020-02-25 10:45:38.9808|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPPS7IFT0L", Request id "0HLTPPS7IFT0L:00000004": An unhandled exception was thrown by the application.
+2020-02-25 10:45:41.9855|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPPS7IFT0L", Request id "0HLTPPS7IFT0L:00000006": An unhandled exception was thrown by the application.
+2020-02-25 10:46:03.5367|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPPS7IFT0L", Request id "0HLTPPS7IFT0L:00000007": An unhandled exception was thrown by the application.
+2020-02-25 10:46:08.1220|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPPS7IFT0L", Request id "0HLTPPS7IFT0L:00000008": An unhandled exception was thrown by the application.
+2020-02-25 10:47:06.1201|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPPT4IDKFO", Request id "0HLTPPT4IDKFO:00000003": An unhandled exception was thrown by the application.
+2020-02-25 10:48:12.0418|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'DBContent' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-25 10:48:26.6044|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'DBContent' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-25 10:48:37.7295|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (906ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [BlogDB];
+2020-02-25 10:48:38.0833|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (349ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [BlogDB] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2020-02-25 10:48:38.1284|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2020-02-25 10:48:38.1284|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2020-02-25 10:48:38.1339|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2020-02-25 10:48:38.1339|INFO|Microsoft.EntityFrameworkCore.Migrations|Applying migration '20200225084812_Initial'.
+2020-02-25 10:48:38.2091|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetRoles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+);
+2020-02-25 10:48:38.2181|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetUsers] (
+    [Id] nvarchar(450) NOT NULL,
+    [UserName] nvarchar(256) NULL,
+    [NormalizedUserName] nvarchar(256) NULL,
+    [Email] nvarchar(256) NULL,
+    [NormalizedEmail] nvarchar(256) NULL,
+    [EmailConfirmed] bit NOT NULL,
+    [PasswordHash] nvarchar(max) NULL,
+    [SecurityStamp] nvarchar(max) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [PhoneNumberConfirmed] bit NOT NULL,
+    [TwoFactorEnabled] bit NOT NULL,
+    [LockoutEnd] datetimeoffset NULL,
+    [LockoutEnabled] bit NOT NULL,
+    [AccessFailedCount] int NOT NULL,
+    [City] nvarchar(max) NULL,
+    [Street] nvarchar(max) NULL,
+    [Position] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetUsers] PRIMARY KEY ([Id])
+);
+2020-02-25 10:48:38.2181|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [SportGoods] (
+    [id] int NOT NULL IDENTITY,
+    [name] nvarchar(50) NOT NULL,
+    [description] nvarchar(60) NOT NULL,
+    [img] nvarchar(max) NULL,
+    [price] bigint NOT NULL,
+    CONSTRAINT [PK_SportGoods] PRIMARY KEY ([id])
+);
+2020-02-25 10:48:38.2181|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetRoleClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [RoleId] nvarchar(450) NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoleClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AspNetRoleClaims_AspNetRoles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [AspNetRoles] ([Id]) ON DELETE CASCADE
+);
+2020-02-25 10:48:38.5923|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetUserClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetUserClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AspNetUserClaims_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2020-02-25 10:48:38.5923|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetUserLogins] (
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [ProviderKey] nvarchar(450) NOT NULL,
+    [ProviderDisplayName] nvarchar(max) NULL,
+    [UserId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_AspNetUserLogins] PRIMARY KEY ([LoginProvider], [ProviderKey]),
+    CONSTRAINT [FK_AspNetUserLogins_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2020-02-25 10:48:38.5923|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetUserRoles] (
+    [UserId] nvarchar(450) NOT NULL,
+    [RoleId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_AspNetUserRoles] PRIMARY KEY ([UserId], [RoleId]),
+    CONSTRAINT [FK_AspNetUserRoles_AspNetRoles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [AspNetRoles] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_AspNetUserRoles_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2020-02-25 10:48:39.6871|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetUserTokens] (
+    [UserId] nvarchar(450) NOT NULL,
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [Name] nvarchar(450) NOT NULL,
+    [Value] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetUserTokens] PRIMARY KEY ([UserId], [LoginProvider], [Name]),
+    CONSTRAINT [FK_AspNetUserTokens_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2020-02-25 10:48:39.6871|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_AspNetRoleClaims_RoleId] ON [AspNetRoleClaims] ([RoleId]);
+2020-02-25 10:48:39.6871|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE UNIQUE INDEX [RoleNameIndex] ON [AspNetRoles] ([NormalizedName]) WHERE [NormalizedName] IS NOT NULL;
+2020-02-25 10:48:39.6871|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserClaims_UserId] ON [AspNetUserClaims] ([UserId]);
+2020-02-25 10:48:39.6871|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserLogins_UserId] ON [AspNetUserLogins] ([UserId]);
+2020-02-25 10:48:39.6871|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserRoles_RoleId] ON [AspNetUserRoles] ([RoleId]);
+2020-02-25 10:48:39.6960|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [EmailIndex] ON [AspNetUsers] ([NormalizedEmail]);
+2020-02-25 10:48:39.6960|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE UNIQUE INDEX [UserNameIndex] ON [AspNetUsers] ([NormalizedUserName]) WHERE [NormalizedUserName] IS NOT NULL;
+2020-02-25 10:48:40.5092|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20200225084812_Initial', N'2.2.6-servicing-10079');
+2020-02-25 10:49:03.4818|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPPU7PE5E6", Request id "0HLTPPU7PE5E6:00000002": An unhandled exception was thrown by the application.
+2020-02-25 10:49:03.5431|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPPU7PE5E6", Request id "0HLTPPU7PE5E6:00000003": An unhandled exception was thrown by the application.
+2020-02-25 10:49:03.5734|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPPU7PE5E6", Request id "0HLTPPU7PE5E6:00000004": An unhandled exception was thrown by the application.
+2020-02-25 10:49:04.3273|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPPU7PE5E6", Request id "0HLTPPU7PE5E6:00000005": An unhandled exception was thrown by the application.
+2020-02-25 10:52:00.5157|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPPVSJPG0P", Request id "0HLTPPVSJPG0P:00000001": An unhandled exception was thrown by the application.
+2020-02-25 11:33:08.9446|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPQMSI5IKO", Request id "0HLTPQMSI5IKO:00000002": An unhandled exception was thrown by the application.
+2020-02-25 11:33:09.0258|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPQMSI5IKO", Request id "0HLTPQMSI5IKO:00000003": An unhandled exception was thrown by the application.
+2020-02-25 11:33:09.0462|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPQMSI5IKO", Request id "0HLTPQMSI5IKO:00000004": An unhandled exception was thrown by the application.
+2020-02-25 11:33:09.7392|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPQMSI5IKO", Request id "0HLTPQMSI5IKO:00000006": An unhandled exception was thrown by the application.
+2020-02-25 11:36:27.1991|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPQONPFGKD", Request id "0HLTPQONPFGKD:00000001": An unhandled exception was thrown by the application.
+2020-02-25 11:36:35.8498|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPQONPFGKD", Request id "0HLTPQONPFGKD:00000005": An unhandled exception was thrown by the application.
+2020-02-25 11:36:35.8670|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPQONPFGKD", Request id "0HLTPQONPFGKD:00000006": An unhandled exception was thrown by the application.
+2020-02-25 11:36:35.8826|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPQONPFGKD", Request id "0HLTPQONPFGKD:00000007": An unhandled exception was thrown by the application.
+2020-02-25 11:36:36.9339|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPQONPFGKD", Request id "0HLTPQONPFGKD:00000008": An unhandled exception was thrown by the application.
+2020-02-25 11:36:41.2291|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPQONPFGKE", Request id "0HLTPQONPFGKE:00000003": An unhandled exception was thrown by the application.
+2020-02-25 11:36:41.2291|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPQONPFGKE", Request id "0HLTPQONPFGKE:00000004": An unhandled exception was thrown by the application.
+2020-02-25 11:36:41.2952|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPQONPFGKE", Request id "0HLTPQONPFGKE:00000006": An unhandled exception was thrown by the application.
+2020-02-25 11:36:42.8859|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPQONPFGKE", Request id "0HLTPQONPFGKE:00000009": An unhandled exception was thrown by the application.
+2020-02-25 11:36:42.8859|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPQONPFGKE", Request id "0HLTPQONPFGKE:0000000A": An unhandled exception was thrown by the application.
+2020-02-25 11:36:42.9117|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPQONPFGKE", Request id "0HLTPQONPFGKE:0000000B": An unhandled exception was thrown by the application.
+2020-02-25 11:36:43.6766|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPQONPFGKD", Request id "0HLTPQONPFGKD:0000000E": An unhandled exception was thrown by the application.
+2020-02-25 11:36:43.6903|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPQONPFGKD", Request id "0HLTPQONPFGKD:0000000F": An unhandled exception was thrown by the application.
+2020-02-25 11:36:43.7341|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPQONPFGKD", Request id "0HLTPQONPFGKD:00000011": An unhandled exception was thrown by the application.
+2020-02-25 11:36:44.2392|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPQONPFGKE", Request id "0HLTPQONPFGKE:0000000F": An unhandled exception was thrown by the application.
+2020-02-25 11:36:44.2496|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPQONPFGKE", Request id "0HLTPQONPFGKE:00000010": An unhandled exception was thrown by the application.
+2020-02-25 11:36:44.2931|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPQONPFGKE", Request id "0HLTPQONPFGKE:00000012": An unhandled exception was thrown by the application.
+2020-02-25 11:36:45.4954|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPQONPFGKD", Request id "0HLTPQONPFGKD:00000015": An unhandled exception was thrown by the application.
+2020-02-25 11:36:45.5110|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPQONPFGKD", Request id "0HLTPQONPFGKD:00000016": An unhandled exception was thrown by the application.
+2020-02-25 11:36:45.5611|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPQONPFGKD", Request id "0HLTPQONPFGKD:00000018": An unhandled exception was thrown by the application.
+2020-02-25 11:36:48.7705|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPQONPFGKD", Request id "0HLTPQONPFGKD:00000019": An unhandled exception was thrown by the application.
+2020-02-25 11:39:09.8990|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPQQ7SQHON", Request id "0HLTPQQ7SQHON:00000001": An unhandled exception was thrown by the application.
+2020-02-25 11:39:09.9900|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTPQQ7SQHOO", Request id "0HLTPQQ7SQHOO:00000001": An unhandled exception was thrown by the application.
+2020-02-25 11:44:29.7911|WARN|Microsoft.AspNetCore.Identity.UserManager|User 007a6815-c43e-469d-b66b-a48628980e94 password validation failed: PasswordRequiresNonAlphanumeric;PasswordRequiresDigit.
+2020-02-25 11:45:57.4222|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Баскетбольное Кольцо.jpg and QueryString = 
+2020-02-25 11:45:57.4657|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Ракетка настільного тенісу.jpg and QueryString = 
+2020-02-25 11:45:57.4657|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-25 11:46:03.3943|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Баскетбольное Кольцо.jpg and QueryString = 
+2020-02-25 11:46:03.3976|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Ракетка настільного тенісу.jpg and QueryString = 
+2020-02-25 11:46:03.4533|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-25 11:46:09.1861|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Баскетбольное Кольцо.jpg and QueryString = 
+2020-02-25 11:46:09.2657|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Ракетка настільного тенісу.jpg and QueryString = 
+2020-02-25 11:46:09.2657|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 

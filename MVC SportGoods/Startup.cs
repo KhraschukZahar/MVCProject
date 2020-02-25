@@ -16,6 +16,7 @@ using MVC_SportGoods.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
+using MVC_SportGoods.Models;
 
 namespace MVC_SportGoods
 {
@@ -42,7 +43,7 @@ namespace MVC_SportGoods
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddIdentity<IdentityUser, IdentityRole>(options =>
+            services.AddIdentity<AppUser, IdentityRole>(options =>
             {
                 options.Password.RequiredLength = 5;
                 options.Password.RequiredUniqueChars = 2;
