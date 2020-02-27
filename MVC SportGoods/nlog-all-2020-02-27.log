@@ -1,0 +1,28 @@
+2020-02-27 10:20:55.4116|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Баскетбольное Кольцо.jpg and QueryString = 
+2020-02-27 10:20:55.4116|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-27 10:20:58.9970|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Баскетбольное Кольцо.jpg and QueryString = 
+2020-02-27 10:20:58.9970|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-27 10:21:03.5950|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Баскетбольное Кольцо.jpg and QueryString = 
+2020-02-27 10:21:03.5950|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-27 10:21:12.5997|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Баскетбольное Кольцо.jpg and QueryString = 
+2020-02-27 10:21:12.6205|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-27 10:21:14.6062|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-27 10:21:14.6062|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Баскетбольное Кольцо.jpg and QueryString = 
+2020-02-27 10:21:16.4479|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Баскетбольное Кольцо.jpg and QueryString = 
+2020-02-27 10:21:16.4656|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-27 10:21:47.8241|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-27 10:21:47.8419|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Баскетбольное Кольцо.jpg and QueryString = 
+2020-02-27 10:21:49.2891|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Баскетбольное Кольцо.jpg and QueryString = 
+2020-02-27 10:21:49.2891|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-27 10:21:50.8954|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Баскетбольное Кольцо.jpg and QueryString = 
+2020-02-27 10:21:50.8954|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-27 10:22:00.2029|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Баскетбольное Кольцо.jpg and QueryString = 
+2020-02-27 10:22:00.2029|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-27 10:22:04.9065|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Баскетбольное Кольцо.jpg and QueryString = 
+2020-02-27 10:22:04.9301|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-27 10:23:40.5636|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-27 10:23:40.5636|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Баскетбольное Кольцо.jpg and QueryString = 
+2020-02-27 10:23:48.1304|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTRBP2L5UNN", Request id "0HLTRBP2L5UNN:00000005": An unhandled exception was thrown by the application.
+2020-02-27 10:23:58.6721|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTRBP2L5UNN", Request id "0HLTRBP2L5UNN:0000000A": An unhandled exception was thrown by the application.
+2020-02-27 10:24:38.9135|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /Administration/Edituser/36ab7c36-fede-4379-b40c-f656c90291f5 and QueryString = 
+2020-02-27 10:25:40.4931|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTRBQFDF5LQ", Request id "0HLTRBQFDF5LQ:00000003": An unhandled exception was thrown by the application.

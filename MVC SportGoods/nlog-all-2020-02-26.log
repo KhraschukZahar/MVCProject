@@ -1,0 +1,335 @@
+2020-02-26 10:18:03.8640|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'DBContent' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-26 10:18:14.0686|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'DBContent' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-26 10:18:25.6319|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1,111ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [BlogDB];
+2020-02-26 10:18:25.9356|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (293ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [BlogDB] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2020-02-26 10:18:26.0083|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2020-02-26 10:18:26.0276|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2020-02-26 10:18:26.0298|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2020-02-26 10:18:26.0298|INFO|Microsoft.EntityFrameworkCore.Migrations|Applying migration '20200226081804_Initial'.
+2020-02-26 10:18:26.1267|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetRoles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+);
+2020-02-26 10:18:26.1425|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetUsers] (
+    [Id] nvarchar(450) NOT NULL,
+    [UserName] nvarchar(256) NULL,
+    [NormalizedUserName] nvarchar(256) NULL,
+    [Email] nvarchar(256) NULL,
+    [NormalizedEmail] nvarchar(256) NULL,
+    [EmailConfirmed] bit NOT NULL,
+    [PasswordHash] nvarchar(max) NULL,
+    [SecurityStamp] nvarchar(max) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [PhoneNumberConfirmed] bit NOT NULL,
+    [TwoFactorEnabled] bit NOT NULL,
+    [LockoutEnd] datetimeoffset NULL,
+    [LockoutEnabled] bit NOT NULL,
+    [AccessFailedCount] int NOT NULL,
+    [City] nvarchar(max) NULL,
+    [Street] nvarchar(max) NULL,
+    [Position] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetUsers] PRIMARY KEY ([Id])
+);
+2020-02-26 10:18:26.1425|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [SportGoods] (
+    [id] int NOT NULL IDENTITY,
+    [name] nvarchar(50) NOT NULL,
+    [description] nvarchar(60) NOT NULL,
+    [img] nvarchar(max) NULL,
+    [price] bigint NOT NULL,
+    CONSTRAINT [PK_SportGoods] PRIMARY KEY ([id])
+);
+2020-02-26 10:18:26.1425|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetRoleClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [RoleId] nvarchar(450) NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoleClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AspNetRoleClaims_AspNetRoles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [AspNetRoles] ([Id]) ON DELETE CASCADE
+);
+2020-02-26 10:18:26.6783|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetUserClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetUserClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AspNetUserClaims_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2020-02-26 10:18:26.7166|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (37ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetUserLogins] (
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [ProviderKey] nvarchar(450) NOT NULL,
+    [ProviderDisplayName] nvarchar(max) NULL,
+    [UserId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_AspNetUserLogins] PRIMARY KEY ([LoginProvider], [ProviderKey]),
+    CONSTRAINT [FK_AspNetUserLogins_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2020-02-26 10:18:26.7166|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetUserRoles] (
+    [UserId] nvarchar(450) NOT NULL,
+    [RoleId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_AspNetUserRoles] PRIMARY KEY ([UserId], [RoleId]),
+    CONSTRAINT [FK_AspNetUserRoles_AspNetRoles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [AspNetRoles] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_AspNetUserRoles_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2020-02-26 10:18:28.1782|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetUserTokens] (
+    [UserId] nvarchar(450) NOT NULL,
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [Name] nvarchar(450) NOT NULL,
+    [Value] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetUserTokens] PRIMARY KEY ([UserId], [LoginProvider], [Name]),
+    CONSTRAINT [FK_AspNetUserTokens_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2020-02-26 10:18:28.1782|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_AspNetRoleClaims_RoleId] ON [AspNetRoleClaims] ([RoleId]);
+2020-02-26 10:18:28.1782|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE UNIQUE INDEX [RoleNameIndex] ON [AspNetRoles] ([NormalizedName]) WHERE [NormalizedName] IS NOT NULL;
+2020-02-26 10:18:28.1860|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserClaims_UserId] ON [AspNetUserClaims] ([UserId]);
+2020-02-26 10:18:28.1860|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserLogins_UserId] ON [AspNetUserLogins] ([UserId]);
+2020-02-26 10:18:28.1860|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserRoles_RoleId] ON [AspNetUserRoles] ([RoleId]);
+2020-02-26 10:18:28.1860|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [EmailIndex] ON [AspNetUsers] ([NormalizedEmail]);
+2020-02-26 10:18:28.1860|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE UNIQUE INDEX [UserNameIndex] ON [AspNetUsers] ([NormalizedUserName]) WHERE [NormalizedUserName] IS NOT NULL;
+2020-02-26 10:18:29.3107|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20200226081804_Initial', N'2.2.6-servicing-10079');
+2020-02-26 10:21:01.9333|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-26 10:21:01.9333|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Баскетбольное Кольцо.jpg and QueryString = 
+2020-02-26 10:21:01.9333|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Ракетка настільного тенісу.jpg and QueryString = 
+2020-02-26 10:21:05.1642|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Баскетбольное Кольцо.jpg and QueryString = 
+2020-02-26 10:21:05.2150|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Ракетка настільного тенісу.jpg and QueryString = 
+2020-02-26 10:21:05.2150|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-26 10:21:07.4064|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Ракетка настільного тенісу.jpg and QueryString = 
+2020-02-26 10:21:07.4064|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Баскетбольное Кольцо.jpg and QueryString = 
+2020-02-26 10:21:07.4379|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-26 10:21:08.3428|TRACE|MVC_SportGoods.Controllers.SportGoodsController|Trace Log
+2020-02-26 10:21:08.3428|DEBUG|MVC_SportGoods.Controllers.SportGoodsController|Debug Log
+2020-02-26 10:21:08.3428|INFO|MVC_SportGoods.Controllers.SportGoodsController|Information Log
+2020-02-26 10:21:08.3428|WARN|MVC_SportGoods.Controllers.SportGoodsController|Warning Log
+2020-02-26 10:21:08.3428|ERROR|MVC_SportGoods.Controllers.SportGoodsController|Error Log
+2020-02-26 10:21:08.3568|FATAL|MVC_SportGoods.Controllers.SportGoodsController|Critical Log
+2020-02-26 10:21:08.5105|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Баскетбольное Кольцо.jpg and QueryString = 
+2020-02-26 10:21:09.9984|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Баскетбольное Кольцо.jpg and QueryString = 
+2020-02-26 10:21:10.0228|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Ракетка настільного тенісу.jpg and QueryString = 
+2020-02-26 10:21:10.0568|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-26 10:21:20.5805|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Баскетбольное Кольцо.jpg and QueryString = 
+2020-02-26 10:21:20.6015|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Ракетка настільного тенісу.jpg and QueryString = 
+2020-02-26 10:21:20.6552|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-26 10:21:22.0017|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Ракетка настільного тенісу.jpg and QueryString = 
+2020-02-26 10:21:22.0199|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-26 10:21:51.5413|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Ракетка настільного тенісу.jpg and QueryString = 
+2020-02-26 10:21:51.5413|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-26 10:22:06.1249|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-26 10:22:06.1249|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Ракетка настільного тенісу.jpg and QueryString = 
+2020-02-26 10:53:29.2283|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Ракетка настільного тенісу.jpg and QueryString = 
+2020-02-26 10:53:29.2283|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-26 10:56:01.7448|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Ракетка настільного тенісу.jpg and QueryString = 
+2020-02-26 10:56:01.7448|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-26 10:56:21.8415|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /Administrator/ListUsers and QueryString = 
+2020-02-26 10:56:26.4606|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /administration/CreateRole and QueryString = 
+2020-02-26 10:56:57.8040|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'EditUsersInRole' was not found. Searched locations: /Views/Administrator/EditUsersInRole.cshtml, /Views/Shared/EditUsersInRole.cshtml, /Pages/Shared/EditUsersInRole.cshtml
+2020-02-26 10:56:57.8914|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTQJ6KRF5P3", Request id "0HLTQJ6KRF5P3:00000013": An unhandled exception was thrown by the application.
+2020-02-26 10:58:40.8736|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Ракетка настільного тенісу.jpg and QueryString = 
+2020-02-26 10:58:40.8736|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-26 10:58:44.9286|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /Administrator/ListUsers and QueryString = 
+2020-02-26 10:58:52.2568|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'EditUsersInRole' was not found. Searched locations: /Views/Administrator/EditUsersInRole.cshtml, /Views/Shared/EditUsersInRole.cshtml, /Pages/Shared/EditUsersInRole.cshtml
+2020-02-26 10:58:52.3184|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTQJ88V93U1", Request id "0HLTQJ88V93U1:00000006": An unhandled exception was thrown by the application.
+2020-02-26 10:58:57.3838|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'EditUsersInRole' was not found. Searched locations: /Views/Administrator/EditUsersInRole.cshtml, /Views/Shared/EditUsersInRole.cshtml, /Pages/Shared/EditUsersInRole.cshtml
+2020-02-26 10:58:57.3838|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTQJ88V93U1", Request id "0HLTQJ88V93U1:00000008": An unhandled exception was thrown by the application.
+2020-02-26 10:59:14.5587|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-26 10:59:14.5587|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Ракетка настільного тенісу.jpg and QueryString = 
+2020-02-26 11:04:04.1668|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Ракетка настільного тенісу.jpg and QueryString = 
+2020-02-26 11:04:04.1668|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-26 11:04:06.1251|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /Administrator/ListUsers and QueryString = 
+2020-02-26 11:04:13.9112|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'EditUsersInRole' was not found. Searched locations: /Views/Administrator/EditUsersInRole.cshtml, /Views/Shared/EditUsersInRole.cshtml, /Pages/Shared/EditUsersInRole.cshtml
+2020-02-26 11:04:13.9649|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLTQJB9OVT90", Request id "0HLTQJB9OVT90:00000007": An unhandled exception was thrown by the application.
+2020-02-26 11:06:28.4374|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-26 11:06:28.4374|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Ракетка настільного тенісу.jpg and QueryString = 
+2020-02-26 11:06:30.0394|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /Administrator/ListUsers and QueryString = 
+2020-02-26 11:06:35.2689|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /administration/CreateRole and QueryString = 
+2020-02-26 11:07:52.0202|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-26 11:07:52.0202|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Ракетка настільного тенісу.jpg and QueryString = 
+2020-02-26 11:08:01.9801|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /administration/CreateRole and QueryString = 
+2020-02-26 11:10:53.5340|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-26 11:10:53.5340|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Ракетка настільного тенісу.jpg and QueryString = 
+2020-02-26 11:10:57.3213|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Ракетка настільного тенісу.jpg and QueryString = 
+2020-02-26 11:10:57.3384|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-26 11:12:58.7588|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Ракетка настільного тенісу.jpg and QueryString = 
+2020-02-26 11:12:58.7588|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-26 11:15:45.9503|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /Administrator/ListUsers and QueryString = 
+2020-02-26 11:17:33.1021|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'DBContent' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-26 11:17:40.6986|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'DBContent' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-26 11:17:51.8959|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1,042ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [BlogDB];
+2020-02-26 11:17:52.3699|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (466ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [BlogDB] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2020-02-26 11:17:52.4992|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (62ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2020-02-26 11:17:52.5028|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2020-02-26 11:17:52.5028|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2020-02-26 11:17:52.5028|INFO|Microsoft.EntityFrameworkCore.Migrations|Applying migration '20200226091733_Initial'.
+2020-02-26 11:17:52.5734|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (30ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetRoles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+);
+2020-02-26 11:17:52.5938|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetUsers] (
+    [Id] nvarchar(450) NOT NULL,
+    [UserName] nvarchar(256) NULL,
+    [NormalizedUserName] nvarchar(256) NULL,
+    [Email] nvarchar(256) NULL,
+    [NormalizedEmail] nvarchar(256) NULL,
+    [EmailConfirmed] bit NOT NULL,
+    [PasswordHash] nvarchar(max) NULL,
+    [SecurityStamp] nvarchar(max) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [PhoneNumberConfirmed] bit NOT NULL,
+    [TwoFactorEnabled] bit NOT NULL,
+    [LockoutEnd] datetimeoffset NULL,
+    [LockoutEnabled] bit NOT NULL,
+    [AccessFailedCount] int NOT NULL,
+    [City] nvarchar(max) NULL,
+    [Street] nvarchar(max) NULL,
+    [Position] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetUsers] PRIMARY KEY ([Id])
+);
+2020-02-26 11:17:52.5938|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [SportGoods] (
+    [id] int NOT NULL IDENTITY,
+    [name] nvarchar(50) NOT NULL,
+    [description] nvarchar(60) NOT NULL,
+    [img] nvarchar(max) NULL,
+    [price] bigint NOT NULL,
+    CONSTRAINT [PK_SportGoods] PRIMARY KEY ([id])
+);
+2020-02-26 11:17:52.6084|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetRoleClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [RoleId] nvarchar(450) NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoleClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AspNetRoleClaims_AspNetRoles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [AspNetRoles] ([Id]) ON DELETE CASCADE
+);
+2020-02-26 11:17:53.0414|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetUserClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetUserClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AspNetUserClaims_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2020-02-26 11:17:53.0670|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetUserLogins] (
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [ProviderKey] nvarchar(450) NOT NULL,
+    [ProviderDisplayName] nvarchar(max) NULL,
+    [UserId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_AspNetUserLogins] PRIMARY KEY ([LoginProvider], [ProviderKey]),
+    CONSTRAINT [FK_AspNetUserLogins_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2020-02-26 11:17:53.0990|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (30ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetUserRoles] (
+    [UserId] nvarchar(450) NOT NULL,
+    [RoleId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_AspNetUserRoles] PRIMARY KEY ([UserId], [RoleId]),
+    CONSTRAINT [FK_AspNetUserRoles_AspNetRoles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [AspNetRoles] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_AspNetUserRoles_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2020-02-26 11:17:54.3539|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetUserTokens] (
+    [UserId] nvarchar(450) NOT NULL,
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [Name] nvarchar(450) NOT NULL,
+    [Value] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetUserTokens] PRIMARY KEY ([UserId], [LoginProvider], [Name]),
+    CONSTRAINT [FK_AspNetUserTokens_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2020-02-26 11:17:54.3539|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_AspNetRoleClaims_RoleId] ON [AspNetRoleClaims] ([RoleId]);
+2020-02-26 11:17:54.3589|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE UNIQUE INDEX [RoleNameIndex] ON [AspNetRoles] ([NormalizedName]) WHERE [NormalizedName] IS NOT NULL;
+2020-02-26 11:17:54.3589|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserClaims_UserId] ON [AspNetUserClaims] ([UserId]);
+2020-02-26 11:17:54.3589|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserLogins_UserId] ON [AspNetUserLogins] ([UserId]);
+2020-02-26 11:17:54.3589|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserRoles_RoleId] ON [AspNetUserRoles] ([RoleId]);
+2020-02-26 11:17:54.3589|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [EmailIndex] ON [AspNetUsers] ([NormalizedEmail]);
+2020-02-26 11:17:54.3912|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE UNIQUE INDEX [UserNameIndex] ON [AspNetUsers] ([NormalizedUserName]) WHERE [NormalizedUserName] IS NOT NULL;
+2020-02-26 11:17:55.3540|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20200226091733_Initial', N'2.2.6-servicing-10079');
+2020-02-26 11:18:55.5337|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Ракетка настільного тенісу.jpg and QueryString = 
+2020-02-26 11:18:55.5337|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Баскетбольное Кольцо.jpg and QueryString = 
+2020-02-26 11:18:55.5337|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-26 11:19:53.8324|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Баскетбольное Кольцо.jpg and QueryString = 
+2020-02-26 11:19:53.8324|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Ракетка настільного тенісу.jpg and QueryString = 
+2020-02-26 11:19:53.8774|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-26 11:19:57.6242|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /Administrator/ListUsers and QueryString = 
+2020-02-26 11:20:17.6873|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /Administrator/ListUsers and QueryString = 
+2020-02-26 11:21:00.4853|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Ракетка настільного тенісу.jpg and QueryString = 
+2020-02-26 11:21:00.4853|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Баскетбольное Кольцо.jpg and QueryString = 
+2020-02-26 11:21:00.5262|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-26 11:21:01.6509|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Баскетбольное Кольцо.jpg and QueryString = 
+2020-02-26 11:21:01.6509|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-26 11:21:04.5752|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /Administrator/ListUsers and QueryString = 
+2020-02-26 11:21:05.7037|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /SportGoods/SportGood and QueryString = 
+2020-02-26 11:21:07.7770|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-26 11:21:07.7770|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Баскетбольное Кольцо.jpg and QueryString = 
+2020-02-26 11:21:16.9361|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Баскетбольное Кольцо.jpg and QueryString = 
+2020-02-26 11:21:16.9376|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-26 11:23:05.7818|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Баскетбольное Кольцо.jpg and QueryString = 
+2020-02-26 11:23:05.7818|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-26 11:23:13.9607|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Баскетбольное Кольцо.jpg and QueryString = 
+2020-02-26 11:23:13.9607|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-26 11:23:25.2667|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
+2020-02-26 11:23:25.2667|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Баскетбольное Кольцо.jpg and QueryString = 
+2020-02-26 11:23:28.3331|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/Баскетбольное Кольцо.jpg and QueryString = 
+2020-02-26 11:23:28.3331|WARN|MVC_SportGoods.Controllers.ErrorController|404 Error Occured. Path = /img/М'яч для американського футболу.jpg and QueryString = 
