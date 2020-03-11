@@ -15,6 +15,20 @@ namespace MVC_SportGoods
         {
 
         }
+        public DBContent()
+        {
+
+        }
         public DbSet<SportsViewModel> SportGoods { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            foreach (var foreignKey in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys()))
+            {
+                foreignKey.DeleteBehavior = DeleteBehavior.Restrict;
+            }
+        }
     }
 }

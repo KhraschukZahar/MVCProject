@@ -48,23 +48,26 @@
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Admin">AdminPanel</a>
                             </li>
                         }
-                        @*@if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))*@
-                        @*{*@
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
-                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Manage
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" asp-controller="Administrator"
-                                       asp-action="ListUsers">Users</a>
-                                    <a class="dropdown-item" asp-controller="Administrator"
-                                       asp-action="ListRoles">Roles</a>
-                                </div>
-                            </li>
-                        @*}*@
+                        @if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+                        {
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Manage
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" asp-controller="Administrator"
+                                   asp-action="ListUsers">Users</a>
+                                <a class="dropdown-item" asp-controller="Administrator"
+                                   asp-action="ListRoles">Roles</a>
+                            </div>
+                        </li>
+                        }
                         @if (SignInManager.IsSignedIn(User))
                         {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Profile" asp-action="Show">Profile</a>
+                            </li>
                             <li class="nav-item">
                                 <form method="post" asp-controller="Account" asp-action="logout">
                                     <button type="submit" style="width:auto"
@@ -120,6 +123,8 @@
                 crossorigin="anonymous"
                 integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
         </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </environment>
     <script src="~/js/site.js" asp-append-version="true"></script>
 
